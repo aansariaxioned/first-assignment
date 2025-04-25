@@ -1,6 +1,5 @@
 import Card from "./component/Card";
 import img from "../public/png.png";
-import Carditem from "./component/Carditem";
 import Listitem from "./component/Listsitem";
 import img1 from "../public/400.svg"
 import Locationcard from "./component/Locationcard";
