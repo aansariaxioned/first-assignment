@@ -12,7 +12,7 @@ export default function Listitem({ image, title, description } : any) {
 
             <Separator className="h-[1px] bg-gray-400" />
 
-                <div className="card grid  justify-center items-center grid-cols-1 lg:grid-cols-3  px-10 py-5 gap-5 bg-gray-200 -2 ">
+                <div className="card grid  justify-center items-center sm:grid-cols-2 md:grid-cols-3  px-10 py-5 gap-5 bg-gray-200 -2 ">
 
                     {/* Image */}
                     <div className="card image">
@@ -21,6 +21,7 @@ export default function Listitem({ image, title, description } : any) {
                             width={200}
                             height={200}
                             alt="Error"
+                            className=""
                         />
                     </div>
 
@@ -30,7 +31,7 @@ export default function Listitem({ image, title, description } : any) {
                     {/* Description */}
 
                     {/* Icon */}
-                    <div>
+                    <div className="grid col-span-2 md:col-span-1">
 
                         <p>{description}</p>
                         <div className="arrow-image">
