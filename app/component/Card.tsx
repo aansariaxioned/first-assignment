@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Card({ image, title, description }) {
+export default function Card({ image, title, description } : any) {
 
 
   return (

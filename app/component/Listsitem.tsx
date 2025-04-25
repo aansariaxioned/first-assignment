@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator"
 
 
-export default function Listitem({ image, title, description }) {
+export default function Listitem({ image, title, description } : any) {
     return (
         <section className="list-section">
             {/* <h1 className="font-bold text-2xl underline pl-50 pb-10 underline">Info List Section</h1> */}
