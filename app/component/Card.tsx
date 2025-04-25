@@ -4,20 +4,20 @@ export default function Card({ image, title, description }) {
 
 
   return (
-    <div className="aall-cards grid justify-center">
-
-      <div className="card-item grid gap-5  max-w-sm">
-
+    <section className="all-cards">
+      
+      <div className="card-item grid gap-5">
         <div className="card-image">
           <Image
             src={image}
             width={400}
             height={400}
             alt="Placeholder image"
+            className="w-full"
           />
         </div>
-        <h1 className="heading text-3xl font-medium  border-b border-gray-800  w-fit">{title}</h1>
-        <p>{[description]}</p>
+        <h1 className="heading text-3xl font-medium  underline ">{title}</h1>
+        <p>{description}</p>
 
         <div className="arrow-image">
           <Image
@@ -30,6 +30,6 @@ export default function Card({ image, title, description }) {
       </div>
 
 
-    </div>
+    </section>
   )
 }
