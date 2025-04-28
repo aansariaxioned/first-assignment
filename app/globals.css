@@ -121,8 +121,18 @@
   }
 }
 
-.wrapper {
-  max-width: 1440px;
-  width: 90%;
-  margin: 0 auto;
+
+/* @layer components{
+  .wrapper{
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;  
+  }
+} */
+
+
+@layer components {
+  .wrapper {
+    @apply max-w-[1440px] w-[90%] mx-auto;
+  }
 }
