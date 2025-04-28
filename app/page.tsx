@@ -30,6 +30,7 @@ const locationData = [
 export default function Home() {
   return (
     <div className="@container/main space-y-16 p-2 @sm:p-10 wrapper pt-10">
+
       <section>
         <h2 className="text-2xl font-bold mb-8">Info Card Grid</h2>
         <ListCard items={infoItems} layout="grid" className="border-0 shadow-none p-0" />
@@ -43,8 +44,9 @@ export default function Home() {
       <section className="pt-8">
         <h2 className="text-2xl font-bold mb-8">Location Card</h2>
         <h2 className="text-3xl font-semibold pb-5">New York</h2>
-        <LocationCard items={locationData} />
+        <LocationCard items={locationData} className="border-0 shadow-none p-0 gap-0"/>
       </section>
+      
     </div>
   );
 }

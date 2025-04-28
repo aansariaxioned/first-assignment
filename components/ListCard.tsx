@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import rectangleImage from "@/public/png.png";
@@ -28,7 +28,7 @@ export function ListCard({ items, layout = "grid", className }: ListCardProps) {
             {layout === "list" && (
             <Separator className="bg-gray-300"/>
           )}
-            <CardContent className={`
+            <CardHeader className={`
               ${layout === "list"
                 ? "@container/card  bg-gray-200 grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5 items-center p-4"
                 : "grid gap-y-4 p-0"
@@ -51,18 +51,18 @@ export function ListCard({ items, layout = "grid", className }: ListCardProps) {
               </div>
 
               {/* Title */}
-              <h1 className="text-lg sm:text-xl lg:text-2xl font-semibold underline">
+              <CardTitle className="text-lg sm:text-xl lg:text-2xl font-semibold underline">
                 {item.title}
-              </h1>
+              </CardTitle>
 
               {/* Description and Arrow */}
               <div className="grid  col-span-full md:col-span-1">
-                <p className="text-sm sm:text-base text-gray-600">
+                <CardDescription className="text-sm sm:text-base text-gray-600">
                   {item.description}
-                </p>
+                </CardDescription>
                 <p className="text-4xl font-medium">↳</p>
               </div>
-            </CardContent>
+            </CardHeader>
           </Card>
         ))}
       </div>
