@@ -19,7 +19,7 @@ export function ListCard({ items, layout = "grid", className }: InfoCardProps) {
       <div className={`
         w-full
         ${layout === "grid" 
-          ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5" 
+          ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10" 
           : "grid grid-cols-1 "
         }
       `}>
@@ -31,8 +31,8 @@ export function ListCard({ items, layout = "grid", className }: InfoCardProps) {
             <CardContent className={`
               
               ${layout === "list"
-                ? "@container/card  bg-gray-200 grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5 items-center p-4 "
-                : "grid grid-rows-[auto] lg:grid-rows-[auto_auto] gap-4 p-0"
+                ? "@container/card  bg-gray-200 grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5 items-center p-4"
+                : "grid gap-y-4   p-0"
               }
             `}>
               {/* Image */}
@@ -58,10 +58,10 @@ export function ListCard({ items, layout = "grid", className }: InfoCardProps) {
 
               {/* Description and Arrow */}
               <div className="grid  col-span-full md:col-span-1">
-                <p className="text-sm sm:text-base text-gray-600 mt-3 sm:mt-5">
+                <p className="text-sm sm:text-base text-gray-600">
                   {item.description}
                 </p>
-                <p className="text-4xl font-medium pt-5">↳</p>
+                <p className="text-4xl font-medium">↳</p>
               </div>
             </CardContent>
           </Card>

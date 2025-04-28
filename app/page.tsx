@@ -34,12 +34,12 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-8">Info Card Grid</h2>
         <ListCard items={infoItems} layout="grid" className="border-0 shadow-none p-0" />
       </section>
-      <section>
+      <section className="pt-10">
         <h2 className="text-2xl font-bold mb-8">Info List Section</h2>
         <ListCard items={infoItems} layout="list" className="border-0 shadow-none p-0 gap-0" />
       </section>
 
-      <section>
+      <section className="pt-8">
         <h2 className="text-2xl font-bold mb-8">Location Card</h2>
         <h2 className="text-3xl font-semibold pb-5">New York</h2>
 

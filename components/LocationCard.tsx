@@ -34,7 +34,7 @@ export default function Locationcard({ items=[] }: InfoCardProps) {
                   </div>
 
 
-                  <div className=" text-[15px] sm:text-xl text-gray-900 py-8  ">
+                  <div className=" text-[15px] sm:text-xl text-gray-900 py-4  ">
                       <p>{item.address}</p>
                       <p>{item.city}</p>
                       <p>{item.loaction}</p>
