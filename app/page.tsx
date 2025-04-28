@@ -1,5 +1,5 @@
 import ListCard from "@/components/ListCard";
-import Locationcard from "@/components/LocationCard";
+import LocationCard from "@/components/LocationCard";
 
 const infoItems = [
   {
@@ -21,7 +21,7 @@ const locationData = [
     description: "[Optional location text] Nulla fringilla Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut saepe eum sint, excepturi fugiat minima ex debitis quo id!",
     address: "208 Park Avenue",
     city: "New York",
-    loaction: "NY 10017",
+    location: "NY 10017",
     map: "Map",
     telephone: "+1 212.364.7800"
   },
@@ -34,6 +34,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-8">Info Card Grid</h2>
         <ListCard items={infoItems} layout="grid" className="border-0 shadow-none p-0" />
       </section>
+      
       <section className="pt-10">
         <h2 className="text-2xl font-bold mb-8">Info List Section</h2>
         <ListCard items={infoItems} layout="list" className="border-0 shadow-none p-0 gap-0" />
@@ -42,9 +43,7 @@ export default function Home() {
       <section className="pt-8">
         <h2 className="text-2xl font-bold mb-8">Location Card</h2>
         <h2 className="text-3xl font-semibold pb-5">New York</h2>
-
-
-        <Locationcard items={locationData} />
+        <LocationCard items={locationData} />
       </section>
     </div>
   );

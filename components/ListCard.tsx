@@ -4,7 +4,7 @@ import Image from "next/image";
 import rectangleImage from "@/public/png.png";
 import squareImage from "@/public/400.svg";
 
-interface InfoCardProps {
+interface ListCardProps {
   items: Array<{
     title: string;
     description: string;
@@ -13,7 +13,7 @@ interface InfoCardProps {
   className?: string;
 }
 
-export function ListCard({ items, layout = "grid", className }: InfoCardProps) {
+export function ListCard({ items, layout = "grid", className }: ListCardProps) {
   return (
     <div className="@container">
       <div className={`
@@ -29,10 +29,9 @@ export function ListCard({ items, layout = "grid", className }: InfoCardProps) {
             <Separator className="bg-gray-300"/>
           )}
             <CardContent className={`
-              
               ${layout === "list"
                 ? "@container/card  bg-gray-200 grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5 items-center p-4"
-                : "grid gap-y-4   p-0"
+                : "grid gap-y-4 p-0"
               }
             `}>
               {/* Image */}
