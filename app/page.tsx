@@ -46,6 +46,7 @@ export default function Home() {
             items={infoItems}
             layout="list"
             className="border-0 shadow-none p-0 gap-0"
+            separatorPosition="top"
           />
         </GridListWrapper>
       </section>

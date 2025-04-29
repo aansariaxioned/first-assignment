@@ -3,6 +3,8 @@ import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Separator } from "./ui/separator";
 import squareImage from "../public/400.svg"
 
+type SeparatorPosition = "top" | "bottom" | "none";
+
 interface ListCardProps {
   items: Array<{
     title: string;
@@ -10,16 +12,22 @@ interface ListCardProps {
   }>;
   layout?: "grid" | "list";
   className?: string;
+  separatorPosition?: SeparatorPosition;
 }
 
-export default function CardList({ items, className }: ListCardProps) {
+export default function CardList({
+  items,
+  className,
+  separatorPosition,
+}: ListCardProps) {
   return (
     <div className="@container">
       <div className="w-full grid grid-cols-1">
         {items.map((item, index) => (
           <Card key={index} className={className}>
-
-            <Separator className="bg-gray-300" />
+            {separatorPosition === "top" && (
+              <Separator className="bg-gray-300" />
+            )}
 
             <CardHeader className="@container/card bg-gray-200 grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-5 items-center p-4">
               {/* Image */}
@@ -46,9 +54,13 @@ export default function CardList({ items, className }: ListCardProps) {
                 <p className="text-4xl font-medium">↳</p>
               </div>
             </CardHeader>
+
+            {separatorPosition === "bottom" && (
+              <Separator className="bg-gray-300" />
+            )}
           </Card>
         ))}
       </div>
     </div>
-  )
+  );
 }
