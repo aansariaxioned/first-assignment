@@ -6,8 +6,6 @@ interface LocationCardProps {
   items: Array<{
     description: string;
     address: string;
-    city: string;
-    location: string;
     map: string;
     telephone: string;
 
@@ -22,7 +20,7 @@ export default function LocationCard({ items = [], className }: LocationCardProp
         return (
           <Card key={index} className={className}>
 
-            <CardHeader>
+            <CardHeader className="p-0">
               <div className="image">
                 <Image
                   src={image}
@@ -36,14 +34,14 @@ export default function LocationCard({ items = [], className }: LocationCardProp
               </div>
             </CardHeader>
 
-            <CardContent className="text-[15px] sm:text-xl text-gray-900 py-4">
-              <p>{item.address}</p>
-              <p>{item.city}</p>
-              <p>{item.location}</p>
+            <CardContent className="text-[15px] sm:text-xl text-gray-900 py-4 px-0"> 
+              <p>{item.address.slice(0,15)}</p>
+              <p>{item.address.slice(15,25)}</p>
+              <p>{item.address.slice(25,)}</p>
             </CardContent>
 
-            <CardFooter className="grid">
-              <p className="text-[15px] sm:text-xl text-gray-900 pb-2 underline">{item.map}</p>
+            <CardFooter className="grid px-0">
+              <p className="text-[15px] sm:text-xl text-gray-900 pb-2 underline"><a href={item.map}>Map</a></p>
               <p><a href="tel:+1 212.364.7800" title="+1 212.364.7800">{item.telephone}</a></p>
             </CardFooter>
           </Card>

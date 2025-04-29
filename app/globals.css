@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --breakpoint-xs: 375px;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -116,7 +121,7 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
+  body {  
     @apply bg-background text-foreground;
   }
 }
@@ -130,3 +135,11 @@
 @layer utilities {
   /* Move utility classes here */
 }
+
+
+/* @media(max-width: 375px){
+  .card-img{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+  }
+} */
