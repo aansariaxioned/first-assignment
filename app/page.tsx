@@ -1,5 +1,6 @@
 import CardItem from "@/components/CardItem";
 import CardList from "@/components/CardList";
+import GridCardWrapper from "@/components/GridCardWrapper";
 import GridListWrapper from "@/components/GridListWrapper";
 import LocationCard from "@/components/LocationCard";
 
@@ -36,7 +37,9 @@ export default function Home() {
     <div className=" space-y-16 p-2 @sm:p-10 wrapper pt-10">
       <section>
         <h2 className="text-2xl font-bold mb-8">Info Card Grid</h2>
-        <CardItem items={infoItems} className="border-0 shadow-none p-0" />
+        <GridCardWrapper>
+          <CardItem items={infoItems} className="border-0 shadow-none p-0" />
+        </GridCardWrapper>
       </section>
 
       <section className="pt-10">

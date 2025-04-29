@@ -18,7 +18,7 @@ export default function CardItem({ items, className }: ListCardProps) {
           <Card key={index} className={className}>
             <CardHeader className="grid gap-y-4 p-0">
               {/* Image */}
-              <div className="grid grid-cols-2 sm:grid-cols-1">
+              <div className="grid grid-cols-2 md:grid-cols-1">
                 <Image
                   src={rectangleImage}
                   alt={item.title}
@@ -45,5 +45,5 @@ export default function CardItem({ items, className }: ListCardProps) {
         ))}
       </div>
     </div>
-  )
+  );
 }

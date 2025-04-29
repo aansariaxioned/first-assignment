@@ -5,7 +5,7 @@ interface GridListWrapperProps {
 }
 
 const GridListWrapper: React.FC<GridListWrapperProps> = ({ children }) => {
-  return <div className="w-full col-span-full">{children}</div>;
+  return <div className="w-full grid col-span-full">{children}</div>;
 };
 
 export default GridListWrapper;
